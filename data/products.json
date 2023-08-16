@@ -1,0 +1,26 @@
+[
+    {
+        "id"            : 1,
+        "name"          : "Iphone",
+        "price"         : 10000000,
+        "stock"         : 1,
+        "description"   : "flagship bye Iphone",
+        "brand"         : "Iphone"
+    },
+    {
+        "id"            : 2,
+        "name"          : "galaxy s10",
+        "price"         : 7500000,
+        "stock"         : 2,
+        "description"   : "flagship bye samsung",
+        "brand"         : "Samsung"
+    },
+    {
+        "id"            : 3,
+        "name"          : "Poco F5",
+        "price"         : 8000000,
+        "stock"         : 2,
+        "description"   : "flagship bye xiaomi",
+        "brand"         : "Xiaomi"
+    }
+]
