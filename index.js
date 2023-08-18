@@ -78,7 +78,13 @@ app.get('/api/products/:id', (req, res) => {
 
 app.post('/api/checkout', (req, res) => {
     let {name, address, phone} = req.body
-    if(Object.keys(cart).length == 0){
+if(!name || !address || !phone){
+    res.status(400).json({
+        message : "req masih kosong"
+    })
+}
+
+    if(Object.keys(cart).length == 0){//mengembalikan objek berupa array(length)
         res.json({
             message : "cart masih kosong"
         })
@@ -90,14 +96,14 @@ app.post('/api/checkout', (req, res) => {
     }
 
     if(total > credit){
-        res.json({
+        res.status(400).json({
             message : "saldo tidak cukup"
         })
     }
 
     credit -= total
-
-    res.json({
+    cart = {}
+    res.status(201).json({
         message : "berhasil checkout",
         data : {
             name,
